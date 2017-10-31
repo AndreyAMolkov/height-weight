@@ -1,3 +1,7 @@
+
+float convert(int feet, int inches);
+
+
 /*
 Задача №4
 
