@@ -1,10 +1,17 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "task2.h"
+#include<stdio.h>
 int main()
 {
 	int hour = 0, min = 0;
+	char *greeting = "dfdf";
 	printf(" Enter your time : hh:mm:ss - ");
-	scanf("%i:%i", &hour, &min);
-	printf("\n %i:%i", hour, min);
+	scanf("%i:%i",&hour,&min);
+	greet(hour, min);
+	
+	greeting = (greet(hour, min));
+	printf("%s\n",greeting);
+
 }
 
 /*

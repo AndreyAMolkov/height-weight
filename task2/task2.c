@@ -2,16 +2,16 @@
 #include<stdio.h>
 char* greet(int hour, int min)
 {
-	char* greeting;
-	if (hour > 24 )
+	char* greeting="error task2";
+	if (hour > 24 || min > 60)
 		greeting = "Uncorrect time!";
-	if (hour >= 00 && hour < 6)
+	if (hour >= 00 && hour < 6 && min <= 60)
 		greeting = "Good night!";
-	if (hour >= 6 && hour < 11)
+	if (hour >= 6 && hour < 11 && min <= 60)
 		greeting = "Good morning!";
-	if (hour >= 11 && hour < 18)
+	if (hour >= 11 && hour < 18 && min <= 60)
 		greeting = "Good day!";
-	if (hour >= 18 && hour < 00)
+	if (hour >= 18 && hour <= 24 && min <= 60)
 		greeting = "Good evening!";
 	
 	return greeting;
