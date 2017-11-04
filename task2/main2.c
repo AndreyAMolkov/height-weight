@@ -3,21 +3,29 @@
 #include<stdio.h>
 int main()
 {
-	int hour = 0, min = 0;
+	int hour = 0, min = 0, sec = 0;
 	char *greeting = "dfdf";
 	printf(" Enter your time : hh:mm:ss - ");
-	scanf("%i:%i",&hour,&min);
+	scanf("%i:%i:%i", &hour, &min, &sec);
+
+	if (sec > 60 || (scanf("%i:%i:%i", &hour, &min, &sec))!=3)
+		{
+			printf("Time error\n");
+			return 1;
+		}
+
 	greet(hour, min);
 	
 	greeting = (greet(hour, min));
 	printf("%s\n",greeting);
+	return 0;
 
 }
 
 /*
 Задача №2
 
-Написать программу, которая запрашивает текущее время в
+Написать программу, которая запрашивает текущее время в!;
 формате ЧЧ:ММ:СС, а затем выводит приветствие в зависимости от
 указанного времени ("Доброе утро "Добрый день"и т.д.)
 Пояснение
