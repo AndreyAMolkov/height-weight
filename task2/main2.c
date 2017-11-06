@@ -3,19 +3,18 @@
 #include<stdio.h>
 int main()
 {
-	int hour = 0, min = 0, sec = 0;
+	int hour = 0, min = 0, sec = 0, checktrue=0;
 	char *greeting = "dfdf";
 	printf(" Enter your time : hh:mm:ss - ");
-	scanf("%i:%i:%i", &hour, &min, &sec);
-
-	if (sec > 60 || (scanf("%i:%i:%i", &hour, &min, &sec))!=3)
+	checktrue =scanf("%i:%i:%i", &hour, &min, &sec);//the value of the number of entered parameters
+	greet(hour, min);
+	
+	if (sec > 60 || checktrue !=3)// checking the number of input values and error seconds
 		{
 			printf("Time error\n");
 			return 1;
 		}
 
-	greet(hour, min);
-	
 	greeting = (greet(hour, min));
 	printf("%s\n",greeting);
 	return 0;

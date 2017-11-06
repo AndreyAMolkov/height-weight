@@ -11,7 +11,7 @@ int main()
 	printf("Enter the value angle and type: "); 
 	
 	scanf("%lf%c",&angle,&type);//true correct code
-	//sprintf(buf,"%d%c", &angle, &type);
+	sprintf(buf,"%d%c", &angle, &type);
 
 	
 		if (type == 'd'|| type == 'r'||type == 'D' || type == 'R')
